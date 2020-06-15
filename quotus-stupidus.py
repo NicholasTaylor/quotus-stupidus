@@ -21,7 +21,7 @@ def stupify(arg):
         input = ''
         with open(input_path,'r') as input_file:
             input += input_file.read()
-        output = input.replace('“','"').replace('”','"').replace('‘','\'').replace('’','\'')
+        output = input.replace('“','"').replace('”','"').replace('‘','\'').replace('’','\'').replace('—','-').replace('–','-')
         with open(output_path,'w+') as output_file:
             output_file.write(output)
         print('Output file generated successfully')
